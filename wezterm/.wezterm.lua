@@ -8,5 +8,5 @@ return {
 
 	font_size = 12.0
 	color_scheme = "Catppuccin Mocha",
-	font = wezterm.font("JetBrainsMonoNerdFont"),
+	font = wezterm.font("JetBrainsMono Nerd Font Mono"),
 }
