@@ -1,9 +1,11 @@
-
+-- Basic Settings
 vim.o.number = true
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
 
+
+-- lazy.nvim setup
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
@@ -19,5 +21,29 @@ end
 
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({})
+-- plugin setup
+require("lazy").setup({
+  {
+    "lervag/vimtex",
+    lazy=false,
+    init = function()
+      local is_mac = vim.fn.has("macunix") == 1
+      local is_wsl = vim.fn.has("wsl") == 1
+
+      if is_mac then
+        vim.g.vimtex_view_method = 'sioyek'
+      elseif is_wsl then
+        local function wsl_to_win(path)
+          return vim.fn.system('wslpath -w ' .. vim.fn.shellescape(path)):gsub('\n', '')
+        end
+
+        vim.g.vimtex_view_general_viewer = 'sioyek.exe'
+        vim.g.vimtex_view_general_options = '--reuse-instance ' ..
+          '--forward-search-file "' .. wsl_to_win('@tex') .. '" ' ..
+          '--forward-search-line @line ' ..
+          '"' .. wsl_to_win('@pdf') .. '"'
+      end
+    end
+  },
+})
 
