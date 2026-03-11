@@ -10,4 +10,4 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 eval "$(starship init zsh)"
 
-alias sync-wez="cp ~/dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Patrick/.wezterm.lua
+alias sync-wez="cp ~/dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Patrick/.wezterm.lua"

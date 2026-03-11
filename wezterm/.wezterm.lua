@@ -1,6 +1,6 @@
 local wezterm = require "wezterm"
 
-return {
+return{
 	window_decorations = "INTEGRATED_BUTTONS|RESIZE",
 
 	default_prog = { "wsl.exe", "--exec", "zsh", "-l" },
