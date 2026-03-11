@@ -41,8 +41,6 @@ zstyle ':completion:*' list-colors "{(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
-autoload -U compinit && compinit
-
 eval "$(starship init zsh)"
 
 # Aliases
@@ -52,3 +50,4 @@ alias sync-wez="cp ~/dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Patrick/.wezterm
 
 #Shell Integrations
 eval "$(fzf --zsh)"
+autoload -U compinit && compinit -u
