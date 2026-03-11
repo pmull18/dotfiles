@@ -1,0 +1,7 @@
+format = """$all"""
+
+right_format = """$cmd_duration"""
+
+[cmd_duration]
+min_time = 500
+format = "[$duration]($style)"
