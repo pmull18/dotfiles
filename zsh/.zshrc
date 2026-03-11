@@ -8,3 +8,4 @@ if [ ! -d "$ZINIT_HOME" ]; then
 fi
 
 source "${ZINIT_HOME}/zinit.zsh"
+eval "$(starship init zsh)"
