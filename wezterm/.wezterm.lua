@@ -1,8 +1,12 @@
 local wezterm = require "wezterm"
 
 return {
+	window_decorations = "INTEGRATED_BUTTONS|RESIZE",
+
+	default_prog = { "wsl.exe", "--exec", "zsh", "-l" },
+	default_domain = "WSL:Ubuntu",
+
+	font_size = 12.0
+	color_scheme = "Catppuccin Mocha",
 	font = wezterm.font("JetBrainsMonoNerdFont"),
-	font_size = 13.0,
-	window_decorations = "RESIZE",
-	enable_tab_bar = false,
 }
