@@ -48,7 +48,7 @@ alias ls='ls --color'
 alias la='ls -a'
 alias sync-wez="cp ~/dotfiles/wezterm/.wezterm.lua /mnt/c/Users/Patrick/.wezterm.lua"
 
-alias sioyek="open -na Sioyek"
+alias sioyek="open -a Sioyek"
 
 #Shell Integrations
 eval "$(fzf --zsh)"
