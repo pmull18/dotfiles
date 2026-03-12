@@ -2,7 +2,7 @@ local wezterm = require "wezterm"
 
 local config = {}
 
-config.font_size = 12.0
+config.font_size = 14.0
 config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 	
