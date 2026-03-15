@@ -6,7 +6,7 @@ config.font_size = 14.0
 config.color_scheme = "Catppuccin Mocha"
 config.font = wezterm.font("JetBrainsMono Nerd Font Mono")
 	
-config.window_decorations = "INTEGRATED_BUTTONS|RESIZE"
+config.window_decorations = "INTEGRATED_BUTTONS"
 
 if wezterm.target_triple:find("windows") then
 	config.default_prog = { "wsl.exe", "--exec", "zsh", "l" }
