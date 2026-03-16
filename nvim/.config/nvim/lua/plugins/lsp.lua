@@ -2,11 +2,8 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      local lspconfig = require("lspconfig")
-
-      lspconfig.clangd.setup({
-        cmd = { "clangd" },
-      })
+      vim.lsp.config("clangd", {})
+      vim.lsp.enable("clangd")
     end,
   },
 }
