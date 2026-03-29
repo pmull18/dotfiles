@@ -53,3 +53,4 @@ alias sioyek="open -a Sioyek"
 #Shell Integrations
 eval "$(fzf --zsh)"
 autoload -U compinit && compinit -u
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
