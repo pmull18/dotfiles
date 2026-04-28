@@ -12,7 +12,12 @@ return {
         capabilities = capabilities,
       })
 
+      vim.lsp.config("pyright", {
+        capabilities = capabilities,
+      })
+
       vim.lsp.enable("clangd")
+      vim.lsp.enable("pyright")
 
       vim.api.nvim_create_autocmd("LspAttach", {
         callback = function(args)
