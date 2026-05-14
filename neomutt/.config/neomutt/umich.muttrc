@@ -1,0 +1,24 @@
+# --- University Identity ---
+set realname = "Patrick Mullen"
+set from = "pgmullen@umich.edu"
+set use_from = yes
+set envelope_from = yes
+
+# --- University IMAP ---
+set folder = "imaps://imap.gmail.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
+
+set imap_user = "pgmullen@umich.edu"
+set imap_pass = "`security find-generic-password -w -s mutt-uni-imap -a your.netid@university.edu`"
+
+# --- University SMTP ---
+set smtp_url = "smtps://pgmullen@umich.edu@smtp.gmail.com:465"
+set smtp_pass = "`security find-generic-password -w -s mutt-uni-imap -a pgmullen@umich.edu`"
+
+# --- OAUTH2 OVERRIDE (Uncomment if using Path B) ---
+# set imap_authenticators = "oauthbearer"
+# set smtp_authenticators = "oauthbearer"
+# set oauth_command = "/path/to/mutt_oauth2.py ~/.config/neomutt/uni_oauth_token"

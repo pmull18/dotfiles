@@ -1,0 +1,20 @@
+
+set realname = "Patrick Mullen"
+set from = "mullen.patrick@icloud.com"
+set use_from = yes
+set envelope_from = yes
+
+# --- iCloud IMAP ---
+set folder = "imaps://imap.mail.me.com:993"
+set spoolfile = "+INBOX"
+set postponed = "+Drafts"
+set record = "+Sent Messages"
+set trash = "+Deleted Messages"
+
+set imap_user = "mullen.patrick@icloud.com"
+# Store this securely in macOS Keychain!
+set imap_pass = "`security find-generic-password -w -s mutt-icloud-imap -a mullen.patrick@icloud.com`"
+
+# --- iCloud SMTP ---
+set smtp_url = "smtp://mullen.patrick@icloud.com@smtp.mail.me.com:587"
+set smtp_pass = "`security find-generic-password -w -s mutt-icloud-imap -a mullen.patrick@icloud.com`"

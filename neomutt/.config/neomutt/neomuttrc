@@ -1,0 +1,23 @@
+set editor = "nvim"
+set sort = threads
+set sort_aux = reverse-last-date-received
+set auto_tag = yes
+set pager_stop = yes
+
+# --- Account Switching Macros ---
+# Press F2 for iCloud, F3 for University
+# This syncs the current mailbox, sources the new account file, and opens its inbox (!)
+macro index,pager <f2> '<sync-mailbox><enter-command>source ~/.config/neomutt/icloud.muttrc<enter><change-folder>!<enter>' "switch to iCloud"
+macro index,pager <f3> '<sync-mailbox><enter-command>source ~/.config/neomutt/uni.muttrc<enter><change-folder>!<enter>' "switch to University"
+
+# --- Default Account on Startup ---
+source ~/.config/neomutt/icloud.muttrc
+
+
+# --- Attachment & HTML Handling ---
+set mailcap_path = ~/.config/neomutt/mailcap
+auto_view text/html
+
+# If an email sends BOTH plain text and HTML, prefer the plain text version first 
+# (saves processing time and usually looks cleaner in the terminal)
+alternative_order text/plain text/html
