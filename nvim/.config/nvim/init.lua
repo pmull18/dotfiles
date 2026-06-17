@@ -3,6 +3,7 @@ vim.o.number = true
 vim.o.expandtab = true
 vim.o.shiftwidth = 2
 vim.o.tabstop = 2
+vim.o.termguicolors = true
 
 vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { noremap = true })
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { noremap = true })
